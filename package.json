@@ -1,0 +1,26 @@
+{
+   "name": "yugioh-psct",
+   "private": true,
+   "type": "module",
+   "module": "index.ts",
+   "scripts": {
+      "build": "bun build.ts",
+      "check": "bun --parallel --no-exit-on-error format:check lint typecheck",
+      "clean": "rm -rf ./dist",
+      "format": "oxfmt",
+      "format:check": "oxfmt --check",
+      "lint": "oxlint",
+      "lint:fix": "oxlint --fix && oxfmt",
+      "typecheck": "tsc"
+   },
+   "devDependencies": {
+      "@types/bun": "latest",
+      "@types/chrome": "^0.2.8",
+      "oxfmt": "^0.66.0",
+      "oxlint": "^1.81.0",
+      "oxlint-tsgolint": "^7.0.2001"
+   },
+   "peerDependencies": {
+      "typescript": "^7"
+   }
+}

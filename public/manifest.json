@@ -1,0 +1,17 @@
+{
+   "manifest_version": 3,
+   "name": "Your Extension Name",
+   "version": "0.1.0",
+   "content_scripts": [
+      {
+         "matches": ["*://www.duelingbook.com/*"],
+         "js": ["content.js"]
+      }
+   ],
+   "web_accessible_resources": [
+      {
+         "matches": ["*://www.duelingbook.com/*"],
+         "resources": ["/descriptions/*"]
+      }
+   ]
+}
