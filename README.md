@@ -1,6 +1,6 @@
-# YuGiOh PSCT
+# YuGiOh Alternate Descriptions
 
-Chrome extension that replaces the Card text on duelingbook.com to it's PSCT variant
+Chrome extension that replaces the Card text on duelingbook.com to a more readable variant than paragraphs.
 
 To install dependencies:
 
