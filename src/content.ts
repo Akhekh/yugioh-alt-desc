@@ -9,16 +9,11 @@ const observer = new MutationObserver(async (mutations) => {
       }
 
       const descriptionUrl = chrome.runtime.getURL(`descriptions/${target.textContent}.html`);
-      let altDescription = "";
       try {
-         altDescription = await (await fetch(new Request(descriptionUrl))).text();
-      } catch {
-         continue;
-      }
-
-      const cardsDiv = target.closest(".cards")!;
-      const previewTxtViewport = cardsDiv.querySelector("#preview_txt .os_viewport")!;
-      previewTxtViewport.innerHTML = altDescription;
+         target.closest(".cards")!.querySelector("#preview_txt .os_viewport")!.innerHTML = await (
+            await fetch(new Request(descriptionUrl))
+         ).text();
+      } catch {}
    }
 });
 

@@ -25,5 +25,5 @@ export default defineConfig({
       sortScripts: true,
    },
 
-   ignorePatterns: ["migrations/", "**/*.md", "**/*.gen.ts"],
+   ignorePatterns: ["**/*.md"],
 });
